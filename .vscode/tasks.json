@@ -1,0 +1,23 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "label": "build",
+         "type": "shell",
+         "command": "cl.exe",
+         "args": [
+            "/EHsc",  // Enable C++ exceptions
+            "/Fe:${fileDirname}\\${fileBasenameNoExtension}.exe",  // Output executable
+            "${file}",  // Input source file
+            "/I", "C:/OpenCV/build/include",  // Include path for OpenCV
+            "/link", "/LIBPATH:C:/OpenCV/build/x64/vc15/lib",  // Library path for OpenCV
+            "opencv_world451.lib"  // Link against OpenCV library
+         ],
+         "group": {
+            "kind": "build",
+            "isDefault": true
+         },
+         "problemMatcher": ["$msCompile"]
+      }
+   ]
+}
