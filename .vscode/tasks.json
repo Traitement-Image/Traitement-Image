@@ -6,6 +6,7 @@
          "command": "cl.exe",
          "args": [
             "/EHsc",
+            "/std:c++17",
             "/Fe:C:\\Users\\pc\\Documents\\Devoir-Traitement-Image\\main.exe",
             "C:\\Users\\pc\\Documents\\Devoir-Traitement-Image\\main.cpp",
             "/I", "C:/opencv/build/include",
